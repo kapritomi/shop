@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/shop/static/css/main.9e632272.css",
+    "main.js": "/shop/static/js/main.ae9b6923.js",
+    "static/js/787.978972ca.chunk.js": "/shop/static/js/787.978972ca.chunk.js",
+    "static/media/articleimg.jpg": "/shop/static/media/articleimg.857ac346920f8506e490.jpg",
+    "static/media/articleimg2.jpg": "/shop/static/media/articleimg2.96cde9ad7e74e423662a.jpg",
+    "static/media/leaves.png": "/shop/static/media/leaves.d82230375b86de632590.png",
+    "static/media/nike7.jpg": "/shop/static/media/nike7.d7d647dc5fa0ffe38c2f.jpg",
+    "static/media/nike5.jpg": "/shop/static/media/nike5.626ff7bf88ff481f1099.jpg",
+    "static/media/nike1.jpg": "/shop/static/media/nike1.393471467e6b10076bae.jpg",
+    "static/media/elso.jpg": "/shop/static/media/elso.48e96aabd146aaf5ec33.jpg",
+    "static/media/nike3.jpg": "/shop/static/media/nike3.b492999c4479659bd5b3.jpg",
+    "static/media/nike8.jpg": "/shop/static/media/nike8.55da8df7674f0cf3a138.jpg",
+    "static/media/nike4.jpg": "/shop/static/media/nike4.3d6c04824cadb0027436.jpg",
+    "static/media/nike6.jpg": "/shop/static/media/nike6.c834491e7a4cb757ebe4.jpg",
+    "static/media/index.cjs": "/shop/static/media/index.87283f34b94ab8669cb4.cjs",
+    "static/media/nike9.jpg": "/shop/static/media/nike9.648d0671a5d67d966795.jpg",
+    "static/media/nike2.jpg": "/shop/static/media/nike2.5c809a55b9860015f25c.jpg",
+    "static/media/logo.svg": "/shop/static/media/logo.6ce24c58023cc2f8fd88.svg",
+    "index.html": "/shop/index.html",
+    "main.9e632272.css.map": "/shop/static/css/main.9e632272.css.map",
+    "main.ae9b6923.js.map": "/shop/static/js/main.ae9b6923.js.map",
+    "787.978972ca.chunk.js.map": "/shop/static/js/787.978972ca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e632272.css",
+    "static/js/main.ae9b6923.js"
+  ]
+}
