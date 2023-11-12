@@ -4,14 +4,10 @@
   ::-webkit-scrollbar {display:none;}
 }
 /* -------------------Background Images---------------------- */
-.background{
-  z-index: 1;
-}
 .backgroundImages{
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   width: 100%;
-  background-color: rgb(210, 210, 210);
 }
 .backgroundImagesContent1{
   opacity: 0.4;
@@ -46,6 +42,7 @@
   padding: 2%;
   margin: 1%;
   border-radius: 2rem;
+  position: relative;
 }
 /* ----------------------Navbar----------------------------- */
 .navbar_background{
@@ -109,6 +106,10 @@
 .jumpSpace{
   margin-bottom: 5%;
 }
+.main{
+  background-color: rgb(210, 210, 210);
+  z-index: -1;
+}
 /* Article style*/
 .article_style{
   background-color: rgb(51, 140, 108);
@@ -116,6 +117,7 @@
   margin: 1%;
   margin-top: 5%;
   border-radius: 10%;
+  position: relative;
 }
 .article_text{
   font-family: 'Abhaya Libre', serif;
@@ -152,8 +154,30 @@
 }
 .slideshowDot.active {
   background-color: grey;
+  border: none;
 }
 /*------------------------ Filter --------------------------*/
 .Filter_box{
-
+  background-color: rgb(210, 210, 210);
+  border-radius: 5rem;
+  border: 1px solid black ;
+  padding: 1rem;
+  z-index: 1;
+  position: relative;
+  
+}
+.button{
+  background-color: rgb(51, 140, 108);
+  border: none;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  min-width: 5rem;
+}
+.button:hover{
+  opacity: 90%;
+}
+.active{
+  background-color: rgb(51, 110, 108);
+  border: 1px solid black;
 }

@@ -17,7 +17,7 @@ export const delay = 5000;
 
 export default function App() {
   const [product, setProducts] = useState([
-  {id: 0, image: "nike2.jpg", name: "Nike pulcsi", price: 15000, like: false, cart: false, number: 1}, 
+  {id: 0, image: "nike2.jpg", name: "Nike", price: 15000, like: false, cart: false, number: 1}, 
   {id: 1, image: "nike2.jpg", name: "Nike", price: 10000, like: false, cart: false, number: 1},
   {id: 2, image: "nike3.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1},
   {id: 3, image: "nike4.jpg", name: "Adidas", price: 15000, like: false, cart: false, number: 1},
@@ -27,9 +27,9 @@ export default function App() {
   {id: 7, image: "nike8.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1},
   {id: 8, image: "nike9.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1},])
   const [cartTotal, setCartTotal] = useState(0);
-  const [filteredList, setFilteredList] = useState(product);
+  const [filteredItems, setFilteredItems] = useState(product)
   return (
-    <>
+    <div className='main'>
       <div className='backgroundImages'>
         <Container>
             <Row>
@@ -45,20 +45,20 @@ export default function App() {
             </Row>
         </Container>
       </div>
-      <div className='background'>
-        <Mynavbar product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal}  setFilteredList={setFilteredList}></Mynavbar>
+      <div>
+        <Mynavbar product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal} setFilteredItems={setFilteredItems}></Mynavbar>
         <Articles></Articles>
           <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
-          <div style={{flex: 1, height: '1px', backgroundColor: 'black'}} />
+          <div style={{flex: 1, height: '1px', backgroundColor: "rgb(51, 140, 108)"}} />
             <div>
-              <p style={{width: '70px', textAlign: 'center'}}>Example</p>
+              <p style={{width: '80px', textAlign: 'center', color: "rgb(51, 140, 108)"}}>Products</p>
             </div>
-          <div style={{flex: 1, height: '1px', backgroundColor: 'black'}} />
+          <div style={{flex: 1, height: '1px', backgroundColor: "rgb(51, 140, 108)"}} />
           </div>
         
-        <ProductsCard product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal} filteredList={filteredList}></ProductsCard>
+        <ProductsCard product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal} filteredItems={filteredItems} setFilteredItems={setFilteredItems}></ProductsCard>
       </div>
-    </>
+    </div>
   );
 }
 

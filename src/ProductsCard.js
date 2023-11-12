@@ -4,18 +4,18 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Form from 'react-bootstrap/Form';
 import IconButton from '@mui/material/IconButton';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
 import { BsCartPlus } from "react-icons/bs";
 
-export function ProductsCard({ product, setProducts, cartTotal, setCartTotal, filteredList }) {
+export function ProductsCard({ product, setProducts, setCartTotal, filteredItems, setFilteredItems }) {
  // const [prod_name, setprod_name] = useState('');
   //const [prod_price, setprod_price] = useState(0);
-  const [isNikeChecked, setIsNikeChecked] = useState(false)
-  const [isPumaChecked, setIsPumaChecked] = useState(false)
-  const [filtered, setFiltered] = useState([]);
-  const [product2, setProduct2] = useState([...product])
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  
+  let filters = ["Nike", "Puma", "Adidas", "Champion"]
+
  /* function product_push({ prod_name, prod_price }) {
     const prod_id = product.length + 1;
     setProducts(product => [...product, { id: prod_id, image: "nike9.jpg", name: prod_name, price: prod_price, like: false, cart: false },]);
@@ -68,13 +68,29 @@ export function ProductsCard({ product, setProducts, cartTotal, setCartTotal, fi
     }
     setCartTotal(sum);
   }
-  const checkNikeHandler = () => {
-    setIsNikeChecked(!isNikeChecked)
-
-  }
-  const checkPumaHandler = () =>{
-    setIsPumaChecked(!isPumaChecked)
-    
+  const handleFilterButtonClick = (selectedCategory)=>{
+    if(selectedFilters.includes(selectedCategory)){
+      let filters = selectedFilters.filter((el) => el !== selectedCategory);
+      setSelectedFilters(filters);
+    }
+    else{
+      setSelectedFilters([...selectedFilters, selectedCategory])
+    }
+  };
+  useEffect(() => {
+    filterItems();
+  }, [selectedFilters]);
+  const filterItems=()=>{
+    if(selectedFilters.length>0){
+      let tempItems = selectedFilters.map((selectedCategory) =>{
+        let temp = product.filter((item) => item.name === selectedCategory)
+        return temp;
+      });
+      setFilteredItems(tempItems.flat());
+    }
+    else{
+      setFilteredItems([...product])
+    }
   }
 
   return (
@@ -82,14 +98,15 @@ export function ProductsCard({ product, setProducts, cartTotal, setCartTotal, fi
         <Row>
           <Col>
             <div className='Filter_box'>
-              <Form.Check type="checkbox" id="checkbox" checked={isNikeChecked} onChange={checkNikeHandler} label='Nike'/>
-              <Form.Check type="checkbox" id="checkbox1" checked={isPumaChecked} onChange={checkPumaHandler} label= 'Puma'/>
+              {filters.map((category, idx) => (
+                <button key={idx} onClick={()=> handleFilterButtonClick(category)} className={`button ${selectedFilters?.includes(category) ? "active" : ""}`}>{category}</button> 
+              ))}
             </div>
           </Col>
           <Col xs={8}>
             <Container>
               <Row xs={1} md={4}>
-                {product2.map(item => <Col key={item.id}>
+                {filteredItems.map(item => <Col key={item.id}>
                   <div className='produccard_background'>
                     <Image className='product_image' src={require("./" + item.image)} alt={item.name} fluid></Image>
                     <p className='name'>{item.name}</p>

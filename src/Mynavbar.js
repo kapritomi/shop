@@ -16,7 +16,7 @@ import { BsCart } from "react-icons/bs";
 import { LuFilter } from 'react-icons/lu';
 import { AiOutlineSearch } from "react-icons/ai";
 
-export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFilteredList }) {
+export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFilteredItems}) {
   const cartcontent = [];
   let cartNumber = 0;
 
@@ -73,7 +73,7 @@ export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFil
       return item.name.toLowerCase().indexOf(query.toLowerCase()) !== -1;
     });
 
-    setFilteredList(updatedList);
+    setFilteredItems(updatedList);
   };
 
   cartItems();
