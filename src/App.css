@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  ::-webkit-scrollbar {display:none;}
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* -------------------Background Images---------------------- */
+.background{
+  z-index: 1;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.backgroundImages{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  background-color: rgb(210, 210, 210);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.backgroundImagesContent1{
+  opacity: 0.4;
+  transform: rotate(210deg);
+}
+.backgroundImagesContent2{
+  opacity: 0.4;
+  transform: rotate(320deg);
+}
+.backgroundImagesContent3{
+  opacity: 0.4;
+  transform: rotate(320deg);
+  margin-top: 25%;
+  margin-left: -25%;
+}
+.backgroundImagesContent4{
+  opacity: 0.4;
+  transform: rotate(240deg);
+  margin-top: 250%;
+}
+.backgroundImagesContent5{
+  opacity: 0.4;
+  transform: rotate(260deg);
+  margin-top: 20%;
+}
+/* --------------------Product Card------------------------- */
+.produccard_background{
+  background-color: rgb(51, 140, 108);
+  font-family: 'Abhaya Libre', serif;
+  color: rgb(210, 210, 210);
+  width: 100%;
+  padding: 2%;
+  margin: 1%;
+  border-radius: 2rem;
+}
+/* ----------------------Navbar----------------------------- */
+.navbar_background{
+  background-color: rgb(51, 140, 108) !important;
+  position: sticky;
+}
+.navbar_Search{
+  background-color: rgb(51, 140, 108) !important; 
+  border-color: rgb(51, 140, 108) !important;
+  border-bottom-color: black !important;
+  border-radius: 0%;
+  text-decoration: none;
+  color: rgb(210, 210, 210) !important;
+}
+.navbar_Lineblack{
+  border-bottom-color: black !important;
+}
+.navbar_LineWhite {
+  border-bottom-color: rgb(210, 210, 210) !important;
+  transition: all 0.7s ease;
+}
+.navbar_LineWhite::placeholder { 
+  color: rgb(210, 210, 210);
+  transition: all 0.7s ease;
+}
+.cart_product_image{
+  width: 100%;
+}
+.cartContent{
+  width: 350px;
+}
+.cartContentPrice{
+  font-weight: bold;
+  color: rgb(51, 140, 108);
+}
+.cartContentText{
+  text-align: right;
+}
+.dropdown-toggle::after {
+  display: none !important; 
+}
+.cartIcon{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.form-control{
+  width: 500px;
 }
+.name{
+  margin-top: 2%;
+  margin-left: 5%;
+}
+.price{
+  text-align: left;
+  margin-left: 5%;
+}
+.product_image{
+  border-radius: 2rem;
+}
+.jumpSpace{
+  margin-bottom: 5%;
+}
+/* Article style*/
+.article_style{
+  background-color: rgb(51, 140, 108);
+  padding: 3%;
+  margin: 1%;
+  margin-top: 5%;
+  border-radius: 10%;
+}
+.article_text{
+  font-family: 'Abhaya Libre', serif;
+  color: whitesmoke;
+  margin-top: 2%;
+  margin-left: 2%;
+}
+/* Image slideshow */
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+.slide {
+  display: inline-block;
+  width: 100%;
+  border-radius: 40px;
+}
+/* Buttons */
+.slideshowDots {
+  text-align: center;
+}
+.slideshowDot {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: #c4c4c4;
+}
+.slideshowDot.active {
+  background-color: grey;
+}
+/*------------------------ Filter --------------------------*/
+.Filter_box{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
