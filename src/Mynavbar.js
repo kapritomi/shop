@@ -10,16 +10,18 @@ import IconButton from '@mui/material/IconButton';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useState } from 'react';
+import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { BsCartDash } from "react-icons/bs";
 import { BsCart } from "react-icons/bs";
-import { LuFilter } from 'react-icons/lu';
+import ReactModal from 'react-modal';
+
 import { AiOutlineSearch } from "react-icons/ai";
 
 export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFilteredItems, setSelectedFilters}) {
   const cartcontent = [];
   let cartNumber = 0;
-
+  const [open, setOpen] = useState(false);
   const [show, setShow] = useState(false);
   const [x, setX] = useState(false);
   const showDropdown = (e) => {
@@ -74,9 +76,8 @@ export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFil
     });
 
     setFilteredItems(updatedList);
-    setSelectedFilters([]);
   };
-
+ 
   cartItems();
 
   return (
@@ -88,10 +89,9 @@ export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFil
           <AiOutlineSearch size={25}></AiOutlineSearch>
           <Nav className="me-auto">
             <AnchorLink href="#course" style={{ textDecoration: "none" }}>
-              <Form.Control type="text" placeholder="Search" onChange={filterBySearch} className={`${x ? 'navbar_LineWhite' : 'navbar_Lineblack'} navbar_Search shadow-none`} onMouseEnter={() => setX(true)} onMouseLeave={() => setX(false)} />
+              <Form.Control type="text" placeholder="Search" onChange={filterBySearch} onClick={()=>setSelectedFilters([])} className={`${x ? 'navbar_LineWhite' : 'navbar_Lineblack'} navbar_Search shadow-none`} onMouseEnter={() => setX(true)} onMouseLeave={() => setX(false)} />
             </AnchorLink>
-            <NavDropdown title={<LuFilter size={25}></LuFilter>}>
-            </NavDropdown>
+           
           </Nav>
           <Nav>
             <NavDropdown title={<Badge badgeContent={cartNumber}><BsCart size={25}></BsCart></Badge>} id="navbarScrollingDropdown" drop='start' show={show} onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
@@ -111,14 +111,33 @@ export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFil
 
               <NavDropdown.Item>VÉGÖSSZEG: {cartTotal} Ft</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item> <AiOutlineArrowRight></AiOutlineArrowRight>Kosár tartalma</NavDropdown.Item>
+              <NavDropdown.Item onClick={()=>setOpen(true)}> <AiOutlineArrowRight></AiOutlineArrowRight>Kosár tartalma</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#memes">
+            <Nav.Link>
               User
             </Nav.Link>
           </Nav>
+          <ReactModal isOpen={open} className='product_modal'>
+            <Row >
+              <Col>
+              </Col>
+              <Col>
+                <IconButton onClick={()=>setOpen(false)} className='product_modal_close'><AiOutlineClose size={35}></AiOutlineClose></IconButton>
+              </Col>
+            </Row>
+            {cartcontent.map(item=> <Row key={item.id}>
+              <Col xs={2}>
+              <Image className='cart_product_image' src={require("./" + item.image)} alt={item.name}></Image>
+              </Col>
+              <Col xs={6}>{item.name}</Col>
+              <Col xs={2}>{item.number}</Col>
+              <Col xs={2}>{item.price}</Col>
+            </Row>
+              )}
+          </ReactModal>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    
   );
 }

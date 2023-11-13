@@ -1,6 +1,7 @@
 *{
   padding: 0;
   margin: 0;
+  font-family: 'Abhaya Libre', serif;
   ::-webkit-scrollbar {display:none;}
 }
 /* -------------------Background Images---------------------- */
@@ -36,7 +37,6 @@
 /* --------------------Product Card------------------------- */
 .produccard_background{
   background-color: rgb(51, 140, 108);
-  font-family: 'Abhaya Libre', serif;
   color: rgb(210, 210, 210);
   width: 100%;
   padding: 2%;
@@ -103,6 +103,9 @@
 .product_image{
   border-radius: 2rem;
 }
+.product_image:hover{
+  cursor: pointer;
+}
 .jumpSpace{
   margin-bottom: 5%;
 }
@@ -159,12 +162,13 @@
 /*------------------------ Filter --------------------------*/
 .Filter_box{
   background-color: rgb(210, 210, 210);
-  border-radius: 5rem;
+  border-radius: 2.5rem;
   border: 1px solid black ;
   padding: 1rem;
-  z-index: 1;
+  z-index: 0;
   position: relative;
-  
+  margin-left: 1rem;
+  width: 280px;
 }
 .button{
   background-color: rgb(51, 140, 108);
@@ -180,4 +184,41 @@
 .active{
   background-color: rgb(51, 110, 108);
   border: 1px solid black;
+}
+.filterText{
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+/*------------------------ Product Modal --------------------------*/
+.product_modal{
+  width: 1000px;
+  height: 700px;
+  margin: auto;
+  margin-top: 5%;
+  background-color: rgb(0, 128, 128);
+  padding: 1rem;
+  border-radius: 3rem;
+}
+.product_modal_close{
+  float: right;
+}
+.product_modal_image{
+  border-radius: 2rem;
+}
+.product_modal_title{
+  font-size: 30px;
+  color: rgb(210, 210, 210);
+}
+.product_modal_price{
+  font-size: 35px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color: rgb(210, 210, 210);
+}
+.product_modal_content{
+  font-size: 20px;
+  color: rgb(210, 210, 210);
+}
+.product_modal_desc{
+  color: rgb(210, 210, 210);
 }

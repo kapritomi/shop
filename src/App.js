@@ -17,15 +17,15 @@ export const delay = 5000;
 
 export default function App() {
   const [product, setProducts] = useState([
-  {id: 0, image: "nike2.jpg", name: "Nike", price: 15000, like: false, cart: false, number: 1}, 
-  {id: 1, image: "nike2.jpg", name: "Nike", price: 10000, like: false, cart: false, number: 1},
-  {id: 2, image: "nike3.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1},
-  {id: 3, image: "nike4.jpg", name: "Adidas", price: 15000, like: false, cart: false, number: 1},
-  {id: 4, image: "nike6.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1},
-  {id: 5, image: "nike6.jpg", name: "Nike", price: 15000, like: false, cart: false, number: 1},
-  {id: 6, image: "nike7.jpg", name: "Adidas", price: 15000, like: false, cart: false, number: 1},
-  {id: 7, image: "nike8.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1},
-  {id: 8, image: "nike9.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1},])
+  {id: 0, image: "nike2.jpg", name: "Nike", price: 15000, like: false, cart: false, number: 1, open: false}, 
+  {id: 1, image: "nike2.jpg", name: "Nike", price: 10000, like: false, cart: false, number: 1, open: false},
+  {id: 2, image: "nike3.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1, open: false},
+  {id: 3, image: "nike4.jpg", name: "Adidas", price: 15000, like: false, cart: false, number: 1, open: false},
+  {id: 4, image: "nike6.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false},
+  {id: 5, image: "nike6.jpg", name: "Nike", price: 15000, like: false, cart: false, number: 1, open: false},
+  {id: 6, image: "nike7.jpg", name: "Adidas", price: 15000, like: false, cart: false, number: 1, open: false},
+  {id: 7, image: "nike8.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1, open: false},
+  {id: 8, image: "nike9.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false},])
   const [cartTotal, setCartTotal] = useState(0);
   const [filteredItems, setFilteredItems] = useState(product);
   const [selectedFilters, setSelectedFilters] = useState([]);
@@ -47,7 +47,13 @@ export default function App() {
         </Container>
       </div>
       <div>
-        <Mynavbar product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal} setFilteredItems={setFilteredItems} setSelectedFilters={setSelectedFilters}></Mynavbar>
+        <Mynavbar product={product} 
+                  setProducts={setProducts} 
+                  cartTotal={cartTotal} 
+                  setCartTotal={setCartTotal} 
+                  setFilteredItems={setFilteredItems} 
+                  setSelectedFilters={setSelectedFilters}>
+        </Mynavbar>
         <Articles></Articles>
           <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
           <div style={{flex: 1, height: '1px', backgroundColor: "rgb(51, 140, 108)"}} />
@@ -56,8 +62,15 @@ export default function App() {
             </div>
           <div style={{flex: 1, height: '1px', backgroundColor: "rgb(51, 140, 108)"}} />
           </div>
-        
-        <ProductsCard product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal} filteredItems={filteredItems} setFilteredItems={setFilteredItems} selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters}></ProductsCard>
+        <ProductsCard product={product} 
+                      setProducts={setProducts} 
+                      cartTotal={cartTotal} 
+                      setCartTotal={setCartTotal} 
+                      filteredItems={filteredItems} 
+                      setFilteredItems={setFilteredItems} 
+                      selectedFilters={selectedFilters} 
+                      setSelectedFilters={setSelectedFilters}>
+        </ProductsCard>
       </div>
     </div>
   );
