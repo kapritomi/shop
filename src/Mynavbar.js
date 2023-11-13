@@ -16,7 +16,7 @@ import { BsCart } from "react-icons/bs";
 import { LuFilter } from 'react-icons/lu';
 import { AiOutlineSearch } from "react-icons/ai";
 
-export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFilteredItems}) {
+export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFilteredItems, setSelectedFilters}) {
   const cartcontent = [];
   let cartNumber = 0;
 
@@ -74,6 +74,7 @@ export function Mynavbar({ product, setProducts, cartTotal, setCartTotal, setFil
     });
 
     setFilteredItems(updatedList);
+    setSelectedFilters([]);
   };
 
   cartItems();

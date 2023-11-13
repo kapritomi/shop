@@ -9,10 +9,10 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
 import { BsCartPlus } from "react-icons/bs";
 
-export function ProductsCard({ product, setProducts, setCartTotal, filteredItems, setFilteredItems }) {
+export function ProductsCard({ product, setProducts, setCartTotal, filteredItems, setFilteredItems, selectedFilters, setSelectedFilters }) {
  // const [prod_name, setprod_name] = useState('');
   //const [prod_price, setprod_price] = useState(0);
-  const [selectedFilters, setSelectedFilters] = useState([]);
+  
   
   let filters = ["Nike", "Puma", "Adidas", "Champion"]
 

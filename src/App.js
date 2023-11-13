@@ -27,7 +27,8 @@ export default function App() {
   {id: 7, image: "nike8.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1},
   {id: 8, image: "nike9.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1},])
   const [cartTotal, setCartTotal] = useState(0);
-  const [filteredItems, setFilteredItems] = useState(product)
+  const [filteredItems, setFilteredItems] = useState(product);
+  const [selectedFilters, setSelectedFilters] = useState([]);
   return (
     <div className='main'>
       <div className='backgroundImages'>
@@ -46,7 +47,7 @@ export default function App() {
         </Container>
       </div>
       <div>
-        <Mynavbar product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal} setFilteredItems={setFilteredItems}></Mynavbar>
+        <Mynavbar product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal} setFilteredItems={setFilteredItems} setSelectedFilters={setSelectedFilters}></Mynavbar>
         <Articles></Articles>
           <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
           <div style={{flex: 1, height: '1px', backgroundColor: "rgb(51, 140, 108)"}} />
@@ -56,7 +57,7 @@ export default function App() {
           <div style={{flex: 1, height: '1px', backgroundColor: "rgb(51, 140, 108)"}} />
           </div>
         
-        <ProductsCard product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal} filteredItems={filteredItems} setFilteredItems={setFilteredItems}></ProductsCard>
+        <ProductsCard product={product} setProducts={setProducts} cartTotal={cartTotal} setCartTotal={setCartTotal} filteredItems={filteredItems} setFilteredItems={setFilteredItems} selectedFilters={selectedFilters} setSelectedFilters={setSelectedFilters}></ProductsCard>
       </div>
     </div>
   );
