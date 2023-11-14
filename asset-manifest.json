@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/shop/static/css/main.23880b34.css",
-    "main.js": "/shop/static/js/main.e1fe2ef0.js",
+    "main.css": "/shop/static/css/main.24fa36cc.css",
+    "main.js": "/shop/static/js/main.e79f53c6.js",
     "static/js/787.978972ca.chunk.js": "/shop/static/js/787.978972ca.chunk.js",
     "static/media/articleimg.jpg": "/shop/static/media/articleimg.857ac346920f8506e490.jpg",
     "static/media/articleimg2.jpg": "/shop/static/media/articleimg2.96cde9ad7e74e423662a.jpg",
     "static/media/leaves.png": "/shop/static/media/leaves.d82230375b86de632590.png",
+    "static/media/nike10.jpg": "/shop/static/media/nike10.a815dc53b639260d693e.jpg",
+    "static/media/nike12.jpg": "/shop/static/media/nike12.3f4e04a6c4b9cc1baf9a.jpg",
+    "static/media/nike13.jpg": "/shop/static/media/nike13.f4bdfefba18827313cbf.jpg",
+    "static/media/nike11.jpg": "/shop/static/media/nike11.be8d7690016376bd972c.jpg",
+    "static/media/nike5.jpg": "/shop/static/media/nike5.612fce5c895b945724d0.jpg",
     "static/media/nike7.jpg": "/shop/static/media/nike7.d7d647dc5fa0ffe38c2f.jpg",
-    "static/media/nike5.jpg": "/shop/static/media/nike5.626ff7bf88ff481f1099.jpg",
-    "static/media/nike1.jpg": "/shop/static/media/nike1.393471467e6b10076bae.jpg",
+    "static/media/nike1.jpg": "/shop/static/media/nike1.2750cf5a379af3a484d1.jpg",
     "static/media/elso.jpg": "/shop/static/media/elso.48e96aabd146aaf5ec33.jpg",
     "static/media/nike3.jpg": "/shop/static/media/nike3.b492999c4479659bd5b3.jpg",
     "static/media/nike8.jpg": "/shop/static/media/nike8.55da8df7674f0cf3a138.jpg",
@@ -19,12 +23,12 @@
     "static/media/nike2.jpg": "/shop/static/media/nike2.5c809a55b9860015f25c.jpg",
     "static/media/logo.svg": "/shop/static/media/logo.6ce24c58023cc2f8fd88.svg",
     "index.html": "/shop/index.html",
-    "main.23880b34.css.map": "/shop/static/css/main.23880b34.css.map",
-    "main.e1fe2ef0.js.map": "/shop/static/js/main.e1fe2ef0.js.map",
+    "main.24fa36cc.css.map": "/shop/static/css/main.24fa36cc.css.map",
+    "main.e79f53c6.js.map": "/shop/static/js/main.e79f53c6.js.map",
     "787.978972ca.chunk.js.map": "/shop/static/js/787.978972ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.23880b34.css",
-    "static/js/main.e1fe2ef0.js"
+    "static/css/main.24fa36cc.css",
+    "static/js/main.e79f53c6.js"
   ]
 }
