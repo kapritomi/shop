@@ -14,18 +14,24 @@ export const article =[{image: 'articleimg.jpg', text: "Lorem Ipsum is simply du
                 {image: 'articleimg2.jpg'}]
 export const delay = 5000;
 
-
 export default function App() {
   const [product, setProducts] = useState([
-  {id: 0, image: "nike2.jpg", name: "Nike", price: 15000, like: false, cart: false, number: 1, open: false}, 
-  {id: 1, image: "nike2.jpg", name: "Nike", price: 10000, like: false, cart: false, number: 1, open: false},
-  {id: 2, image: "nike3.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1, open: false},
-  {id: 3, image: "nike4.jpg", name: "Adidas", price: 15000, like: false, cart: false, number: 1, open: false},
-  {id: 4, image: "nike6.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false},
-  {id: 5, image: "nike6.jpg", name: "Nike", price: 15000, like: false, cart: false, number: 1, open: false},
-  {id: 6, image: "nike7.jpg", name: "Adidas", price: 15000, like: false, cart: false, number: 1, open: false},
-  {id: 7, image: "nike8.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1, open: false},
-  {id: 8, image: "nike9.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false},])
+  {id: 0, image: "nike1.jpg", name: "Nike", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike1.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"}, 
+  {id: 1, image: "nike2.jpg", name: "Nike", price: 10000, like: false, cart: false, number: 1, open: false, galery: "nike2.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 2, image: "nike3.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike3.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 3, image: "nike4.jpg", name: "Adidas", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike4.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 4, image: "nike5.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike5.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 5, image: "nike6.jpg", name: "Nike", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike6.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 6, image: "nike7.jpg", name: "Adidas", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike7.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 7, image: "nike8.jpg", name: "Puma", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike8.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 8, image: "nike9.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike9.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 9, image: "nike10.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike10.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 10, image: "nike11.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike11.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 11, image: "nike12.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike12.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 12, image: "nike13.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike13.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 13, image: "nike13.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike13.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+  {id: 14, image: "nike13.jpg", name: "Champion", price: 15000, like: false, cart: false, number: 1, open: false, galery: "nike13.jpg nike10.jpg nike11.jpg nike12.jpg nike13.jpg"},
+])
   const [cartTotal, setCartTotal] = useState(0);
   const [filteredItems, setFilteredItems] = useState(product);
   const [selectedFilters, setSelectedFilters] = useState([]);

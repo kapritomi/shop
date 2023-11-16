@@ -4,6 +4,9 @@
   font-family: 'Abhaya Libre', serif;
   ::-webkit-scrollbar {display:none;}
 }
+html{
+  background-color: rgb(210, 210, 210) !important;
+}
 /* -------------------Background Images---------------------- */
 .backgroundImages{
   z-index: 0;
@@ -68,6 +71,7 @@
   color: rgb(210, 210, 210);
   transition: all 0.7s ease;
 }
+/* --------------------- Cart ------------------------------ */
 .cart_product_image{
   width: 100%;
 }
@@ -110,10 +114,10 @@
   margin-bottom: 5%;
 }
 .main{
-  background-color: rgb(210, 210, 210);
+  background-color: rgb(210, 210, 210) !important;
   z-index: -1;
 }
-/* Article style*/
+/*-------------------------- Article style ------------------------------*/
 .article_style{
   background-color: rgb(51, 140, 108);
   padding: 3%;
@@ -128,7 +132,7 @@
   margin-top: 2%;
   margin-left: 2%;
 }
-/* Image slideshow */
+/*------------------------- Image slideshow -----------------------------*/
 .slideshow {
   margin: 0 auto;
   overflow: hidden;
@@ -142,7 +146,7 @@
   width: 100%;
   border-radius: 40px;
 }
-/* Buttons */
+/*--------------------------- Buttons -----------------------------------*/
 .slideshowDots {
   text-align: center;
 }
@@ -159,7 +163,7 @@
   background-color: grey;
   border: none;
 }
-/*------------------------ Filter --------------------------*/
+/*--------------------------- Filter ----------------------------------*/
 .Filter_box{
   background-color: rgb(210, 210, 210);
   border-radius: 2.5rem;
@@ -198,6 +202,7 @@
   background-color: rgb(0, 128, 128);
   padding: 1rem;
   border-radius: 3rem;
+  z-index: 1;
 }
 .product_modal_close{
   float: right;
@@ -221,4 +226,34 @@
 }
 .product_modal_desc{
   color: rgb(210, 210, 210);
+}
+.galery_images{
+  width: 20%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+.galery_images:hover{
+  border: 1px solid rgb(210, 210, 210);
+}
+.cart_modal_image{
+  width: 70%;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+.cart_modal_row{
+  padding: 0.7rem;
+}
+.gomb{
+ z-index: 0;
+ text-align: center;
+ background-color: rgb(0, 128, 128) !important;
+ color: rgb(210, 210, 210) !important;
+}
+.cart_height{
+  height: 500px;
+}
+.dropdown-menu{
+  --bs-dropdown-link-active-bg: transparent;
+  --bs-dropdown-link-hover-bg: none ;
+  --bs-dropdown-link-active-color: none;
 }
